@@ -49,20 +49,23 @@
         return $base32
     }
 
-    # Hex-Wert in Bytes umwandeln
-    $byteArray = HexToBytes -hex $HexString
+    while ($true) {
+        # Hex-Wert vom Benutzer einlesen
+        $hexValue = Read-Host "Bitte geben Sie den Hex-Wert ein (oder 'exit' zum Beenden)"
 
-    # Bytes in Base32 umwandeln
-    $base32Result = BytesToBase32 -bytes $byteArray
+        # Prüfen, ob der Benutzer das Skript beenden möchte
+        if ($hexValue -eq "exit") {
+            break
+        }
 
-    return $base32Result
+        # Konvertierung durchführen
+        $base32Result = ConvertTo-Base32 -HexString $hexValue
+
+        # Ergebnis ausgeben
+        Write-Output "Base32: $base32Result"
+
+        # Warten, bis der Benutzer Enter drückt, bevor die Schleife neu startet
+        Write-Host "Drücken Sie Enter, um fortzufahren..."
+        [void][System.Console]::ReadLine()
+    }
 }
-
-# Hex-Wert
-$hexValue = "904EAA707DC62A759B9832C6FBE91932BD78CCC1"
-
-# Konvertierung durchführen
-$base32Result = ConvertTo-Base32 -HexString $hexValue
-
-# Ergebnis ausgeben
-Write-Output $base32Result
