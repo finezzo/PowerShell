@@ -4,4 +4,4 @@ ConvertHEXtoBASE32.ps1
 --- Active Directory ---
 
 Get-ADComputers-WithOS-toCSV.ps1
-Provides a csv Output of all computer objects in Active Directory with Name, OS Version, Logon Date and End of Service Information for Windows 10 and Windows 11
+- Provides a csv Output of all computer objects in Active Directory with Name, OS Version, Logon Date and End of Service Information for Windows 10 and Windows 11
