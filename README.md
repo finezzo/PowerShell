@@ -15,3 +15,8 @@ Get-ADComputers-WithOS-toCSV.ps1
 
 Cleanup-INETPUBLOGS.ps1
 Provides a cleanup script to delete Inetpub Logs older than a certain time
+
+--- EntraID ---
+
+CA-Audit.ps1
+Provides a fast way to export all Conditional Access Policies
