@@ -1,5 +1,6 @@
-# Anmelden
+# Melde dich an
 Connect-AzureAD
+Connect-MsolService
 
 # Abrufen aller Policies
 $policies = Get-AzureADMSConditionalAccessPolicy
@@ -7,7 +8,7 @@ $policies = Get-AzureADMSConditionalAccessPolicy
 # Abrufen aller Benutzer, Gruppen und Rollen
 $allUsers = Get-AzureADUser | Select-Object ObjectId, DisplayName, UserPrincipalName
 $allGroups = Get-AzureADGroup | Select-Object ObjectId, DisplayName
-$allRoles = Get-AzureADDirectoryRole | Select-Object ObjectId, DisplayName
+$allRoles = Get-MsolRole | Select-Object ObjectId, Name
 
 # Ausgabe-Datei
 $outputFile = "ConditionalAccessPolicies_CompleteDetails_with_Groups.txt"
@@ -82,7 +83,7 @@ foreach ($policy in $policies) {
     if ($conditions.Users.IncludeRoles) {
         foreach ($roleId in $conditions.Users.IncludeRoles) {
             $resolvedRole = $allRoles | Where-Object { $_.ObjectId -eq $roleId }
-            $includeRoles += if ($resolvedRole) { "$($resolvedRole.DisplayName)" } else { "$roleId (Nicht aufgelöst)" }
+            $includeRoles += if ($resolvedRole) { "$($resolvedRole.Name)" } else { "$roleId (Nicht aufgelöst)" }
         }
     } else {
         $includeRoles = "Keine Angaben"
@@ -90,7 +91,7 @@ foreach ($policy in $policies) {
     if ($conditions.Users.ExcludeRoles) {
         foreach ($roleId in $conditions.Users.ExcludeRoles) {
             $resolvedRole = $allRoles | Where-Object { $_.ObjectId -eq $roleId }
-            $excludeRoles += if ($resolvedRole) { "$($resolvedRole.DisplayName)" } else { "$roleId (Nicht aufgelöst)" }
+            $excludeRoles += if ($resolvedRole) { "$($resolvedRole.Name)" } else { "$roleId (Nicht aufgelöst)" }
         }
     } else {
         $excludeRoles = "Keine Angaben"
