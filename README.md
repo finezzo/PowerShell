@@ -20,3 +20,6 @@ Provides a cleanup script to delete Inetpub Logs older than a certain time
 
 CA-Audit.ps1
 Provides a fast way to export all Conditional Access Policies
+
+Stage-OATH-Tokens-from-CSV.ps1
+Provides an easy way Stage OATH Hardware Tokens and make them ready for Self Service Enrollment
