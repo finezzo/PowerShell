@@ -1,4 +1,12 @@
-The scripts in this repository are provided "as is" and without any warranties. Use them at your own risk. The authors are not liable for any damage or issues that may arise from using these scripts. Please test thoroughly before use in any critical environment.
+Haftungsausschluss für die Nutzung
+----------------------------------
+Dieses Skript wird ohne jegliche Gewährleistung bereitgestellt. Die Nutzung erfolgt auf eigene Gefahr. Der Autor übernimmt keine Verantwortung für Schäden, Datenverluste oder andere Probleme, die durch die Nutzung dieses Skripts entstehen könnten. Bitte prüfen Sie das Skript sorgfältig, bevor Sie es in einer produktiven Umgebung einsetzen. Der Nutzer ist allein verantwortlich für alle Folgen, die sich aus der Anwendung des Skripts ergeben.
+
+Disclaimer for Script Usage
+---------------------------
+This script is provided “as is” without any warranty of any kind. Use it at your own risk. The author is not responsible for any damages, data loss, or other issues that may arise from using this script. Please review the script carefully before using it in a production environment. The user assumes full responsibility for any consequences resulting from the use of this script.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ConvertHEXtoBASE32.ps1
 - Used for converting HEX to BASE32. My use case was converting the HEX-Delivered Secret Keys of FEITAN TOTP Hardware Tokens for importing them in ENTRA ID
