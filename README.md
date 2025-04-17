@@ -10,13 +10,13 @@ This script is provided “as is” without any warranty of any kind. Use it at 
 General
 -------
 **ConvertHEXtoBASE32.ps1**
-Used for converting HEX to BASE32. My use case was converting the HEX-Delivered Secret Keys of FEITAN TOTP Hardware Tokens for importing them in ENTRA ID
+- Used for converting HEX to BASE32. My use case was converting the HEX-Delivered Secret Keys of FEITAN TOTP Hardware Tokens for importing them in ENTRA ID
 
 **Disable-Hiberboot.ps1**
-Disable Fastboot on Windows Systems. Fastboot often leads to problems, because systems are not shutting down correctly and a clean reboot is not performed normally. This disables that behaviour.
+- Disable Fastboot on Windows Systems. Fastboot often leads to problems, because systems are not shutting down correctly and a clean reboot is not performed normally. This disables that behaviour.
 
 **Export-Mails-with-Graph.ps1**
-Used for batch exporting Mails based on the MessageID as EML file.
+- Used for batch exporting Mails based on the MessageID as EML file.
 
 Active Directory
 ----------------
@@ -28,13 +28,13 @@ Exchange on Prem
 ----------------
 
 **Cleanup-INETPUBLOGS.ps1**
-Provides a cleanup script to delete Inetpub Logs older than a certain time
+- Provides a cleanup script to delete Inetpub Logs older than a certain time
 
 EntraID
 -------
 
 **CA-Audit.ps1**
-Provides a fast way to export all Conditional Access Policies
+- Provides a fast way to export all Conditional Access Policies
 
 **Stage-OATH-Tokens-from-CSV.ps1**
-Provides an easy way Stage OATH Hardware Tokens and make them ready for Self Service Enrollment
+- Provides an easy way Stage OATH Hardware Tokens and make them ready for Self Service Enrollment
